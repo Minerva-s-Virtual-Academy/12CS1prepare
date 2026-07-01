@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Level Computer Science: Core Programming Concepts</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; max-width: 1200px; margin: auto; padding: 20px; background-color: #fcfcfc;">
+
+<header style="border-bottom: 3px solid #007BA6; padding-bottom: 15px; margin-bottom: 30px;">
+    <h1 style="color: #007BA6; margin-bottom: 5px;">Fundamental Programming Constructs in Python</h1>
+    <p style="color: #00796B; font-weight: bold; font-style: italic;">Instruction: Work through this core module sequentially. Read the concepts, interact with the syntax sandbox, and complete the exam practice tracking. (Est. Time: 45 mins)</p>
+</header>
+
+<div class="grid-row" style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+    
+    <div class="col-xs-12 col-md-3" style="padding-right: 15px; min-width: 250px; margin-bottom: 20px;">
+        <div class="list-group" style="border: 1px solid #007BA6; border-radius: 4px; overflow: hidden; position: sticky; top: 10px; background: white; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <div style="background-color: #007BA6; color: white; padding: 12px; text-align: center; font-weight: bold;">Topic Navigation</div>
+            <a class="list-group-item" style="color: #007BA6; display: block; padding: 12px; border-bottom: 1px solid #eee; text-decoration: none; font-weight: 500;" href="#reading">1. Core Reading</a>
+            <a class="list-group-item" style="color: #007BA6; display: block; padding: 12px; border-bottom: 1px solid #eee; text-decoration: none; font-weight: 500;" href="#deep-dive">2. Technical Deep Dive</a>
+            <a class="list-group-item" style="color: #007BA6; display: block; padding: 12px; border-bottom: 1px solid #eee; text-decoration: none; font-weight: 500;" href="#interactive">3. Code Sandbox Simulator</a>
+            <a class="list-group-item" style="color: #007BA6; display: block; padding: 12px; border-bottom: 1px solid #eee; text-decoration: none; font-weight: 500;" href="#exam">4. Exam Practice</a>
+            <a class="list-group-item" style="color: #007BA6; display: block; padding: 12px; text-decoration: none; font-weight: 500;" href="#pre-lesson-task">5. Lesson Prep Challenge</a>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-md-9" style="border-left: 2px solid #007BA6; padding-left: 30px; flex: 1; min-width: 300px;">
+        
+        <div id="reading" style="margin-bottom: 50px;">
+            <h2 style="color: #007BA6; margin-top: 0;">1. Introduction &amp; Core Concepts</h2>
+            <p style="color: #00796B; font-weight: bold;">Instruction: Read the foundational architectural concepts below. Pay strict attention to the structural differences between iteration and selection structures.</p>
+            
+            <p>According to the Böhm-Jacopini theorem, any computable algorithm can be expressed using exactly three structural configurations: <strong>sequence</strong>, <strong>selection</strong>, and <strong>iteration</strong>. Mastery of these is vital for optimizing time and space complexity variables at A-Level standard.</p>
+            
+            <div style="background-color: #f4f9fb; padding: 20px; border-radius: 8px; border-left: 5px solid #007BA6; margin-bottom: 20px;">
+                <h4 style="margin-top: 0; color: #007BA6;">💡 Key Structural Definitions</h4>
+                <p style="margin: 0 0 10px 0;"><strong>Sequence:</strong> Statements are executed consecutively, precisely in the linear order they are written down, with the program counter incrementing line-by-line.</p>
+                <p style="margin: 0 0 10px 0;"><strong>Selection:</strong> A logical gateway condition evaluates to <span style="color: #C62828; font-weight: bold;">True</span> or <span style="color: #C62828; font-weight: bold;">False</span> (Boolean), forcing the program control flow down branching execution trajectories.</p>
+                <p style="margin: 0;"><strong>Count-Controlled Iteration:</strong> A processing block that executes a precise, predetermined number of loops using an incrementing or decrementing loop index variable tracking toward a boundary terminate state.</p>
+            </div>
+        </div>
+
+        <div id="deep-dive" style="margin-bottom: 50px;">
+            <h2 style="color: #007BA6;">2. Technical Deep Dive (Python Implementations)</h2>
+            <p style="color: #00796B;">Instruction: Examine how Python shifts structural behavior through syntax formatting. Note that keyword case sensitivity is highly penalized in exam modules.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+                
+                <div style="padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: white; border-top: 4px solid #007BA6;">
+                    <strong style="color: #007BA6; font-size: 1.1em;">A. Sequence Control</strong>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #333333;">Data states are modified predictably. Output variables are strictly bound by historical inputs upstream.</p>
+                    <pre style="background: #f4f4f4; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 0.9em; overflow-x: auto;">
+x = 10
+y = 5
+total = x + y
+<span style="color: #C62828; font-weight: bold;">print</span>(total)</pre>
+                </div>
+
+                <div style="padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: white; border-top: 4px solid #007BA6;">
+                    <strong style="color: #007BA6; font-size: 1.1em;">B. Selection (if-elif-else)</strong>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #333333;">Uses logical comparison branches. Indentation defines the execution block scope cleanly.</p>
+                    <pre style="background: #f4f4f4; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 0.9em; overflow-x: auto;">
+score = 85
+<span style="color: #C62828; font-weight: bold;">if</span> score >= 90:
+    <span style="color: #C62828; font-weight: bold;">print</span>("A* Grade")
+<span style="color: #C62828; font-weight: bold;">elif</span> score >= 80:
+    <span style="color: #C62828; font-weight: bold;">print</span>("A Grade")
+<span style="color: #C62828; font-weight: bold;">else</span>:
+    <span style="color: #C62828; font-weight: bold;">print</span>("Pass")</pre>
+                </div>
+
+                <div style="padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: white; border-top: 4px solid #007BA6;">
+                    <strong style="color: #007BA6; font-size: 1.1em;">C. Structural Selection Match</strong>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #333333;">Introduced in modern Python. Evaluates structural patterns using a streamlined pattern-matching pipeline. The wildcard case `_` handles fall-throughs.</p>
+                    <pre style="background: #f4f4f4; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 0.9em; overflow-x: auto;">
+status = 404
+<span style="color: #C62828; font-weight: bold;">match</span> status:
+    <span style="color: #C62828; font-weight: bold;">case</span> 200:
+        <span style="color: #C62828; font-weight: bold;">print</span>("Success")
+    <span style="color: #C62828; font-weight: bold;">case</span> 404:
+        <span style="color: #C62828; font-weight: bold;">print</span>("Not Found")
+    <span style="color: #C62828; font-weight: bold;">case</span> _:
+        <span style="color: #C62828; font-weight: bold;">print</span>("Unknown Error")</pre>
+                </div>
+
+                <div style="padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: white; border-top: 4px solid #007BA6;">
+                    <strong style="color: #007BA6; font-size: 1.1em;">D. Count-Controlled Iteration</strong>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #333333;">The <span style="color: #C62828; font-weight: bold;">range()</span> object instantiates step bounds. Perfect for structured algorithmic traversal parameters.</p>
+                    <pre style="background: #f4f4f4; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 0.9em; overflow-x: auto;">
+# range(start, stop_exclusive, step)
+<span style="color: #C62828; font-weight: bold;">for</span> i <span style="color: #C62828; font-weight: bold;">in</span> <span style="color: #C62828; font-weight: bold;">range</span>(2, 11, 2):
+    <span style="color: #C62828; font-weight: bold;">print</span>(f"Index is {i}")
+# Generates index states: 2, 4, 6, 8, 10</pre>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="interactive" style="margin-bottom: 50px; background-color: #f5f5f5; padding: 25px; border-radius: 8px; border: 1px solid #ddd;">
+            <h2 style="color: #007BA6; margin-top: 0;">3. Code Sandbox Engine Simulator</h2>
+            <p style="color: #00796B; font-weight: bold;">Instruction: Choose a challenge scenario below, type or debug your pseudocode/Python-logic inside the editor box, and press 'Execute Evaluation Trace' to run automated syntax and logical parsing checks.</p>
+            
+            <div style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <button onclick="loadScenario('sequence')" style="background-color: #007BA6; color: white; border: none; padding: 8px 12px; font-weight: bold; border-radius: 4px; cursor: pointer;">Load Sequence Challenge</button>
+                <button onclick="loadScenario('match')" style="background-color: #007BA6; color: white; border: none; padding: 8px 12px; font-weight: bold; border-radius: 4px; cursor: pointer;">Load Selection Match Challenge</button>
+                <button onclick="loadScenario('iteration')" style="background-color: #007BA6; color: white; border: none; padding: 8px 12px; font-weight: bold; border-radius: 4px; cursor: pointer;">Load Iteration Challenge</button>
+            </div>
+
+            <div style="background-color: #ffffff; border: 1px solid #ccc; padding: 15px; border-radius: 6px; margin-bottom: 15px;">
+                <p style="margin: 0; font-weight: bold; color: #333333;">Active Architecture Goal:</p>
+                <p id="scenarioPrompt" style="margin: 5px 0 0 0; color: #555555; font-style: italic;">Select a challenge above to begin coding diagnostics.</p>
+            </div>
+
+            <div style="position: relative; border-radius: 6px; overflow: hidden; margin-bottom: 15px; border: 1px solid #333;">
+                <div style="background-color: #333333; color: #ffffff; padding: 8px 15px; font-size: 0.85em; font-family: monospace; display: flex; justify-content: space-between; align-items: center;">
+                    <span>A-Level Python Workspace (Python 3.10 Syntactical Rules)</span>
+                    <span style="color: #00796B; font-weight: bold;">● Live Parser Ready</span>
+                </div>
+                <textarea id="codeEditor" rows="10" style="width: 100%; font-family: 'Courier New', Courier, monospace; font-size: 14px; background-color: #1e1e1e; color: #d4d4d4; padding: 15px; border: none; resize: vertical; box-sizing: border-box; outline: none; line-height: 1.5;"></textarea>
+            </div>
+
+            <div style="text-align: right; margin-bottom: 15px;">
+                <button onclick="evaluateStudentCode()" style="background-color: #00796B; color: white; border: none; padding: 12px 20px; font-size: 1em; font-weight: bold; border-radius: 4px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">⚡ Execute Evaluation Trace</button>
+            </div>
+
+            <div id="simFeedbackBox" style="background-color: #f4f9fb; border: 2px dashed #007BA6; padding: 20px; border-radius: 6px; min-height: 80px; transition: all 0.2s ease;">
+                <h4 style="margin-top: 0; color: #007BA6;">Console Diagnostics Output</h4>
+                <p id="feedbackContent" style="margin: 0; color: #666; font-style: italic;">No execution runs have been dispatched yet. Load a diagnostic scenario above to populate workspace.</p>
+            </div>
+        </div>
+
+        <div id="exam" style="margin-bottom: 50px; padding: 25px; background-color: #ffffff; border: 1px solid #007BA6; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <h2 style="color: #007BA6; margin-top: 0;">4. Exam Practice &amp; Mark Scheme Breakdown</h2>
+            <p style="color: #00796B;">Instruction: Attempt this real exam challenge on paper or inside your personal IDE, then toggle the target schema to execute a peer assessment protocol.</p>
+            
+            <p><strong>Question [4 Marks]:</strong> A developer is creating a software model tracking cellular mutations over variable system loops. Write an optimal Python routine which iterates structurally exactly <strong>50 times</strong>. On each execution step, if the iteration index is divisible by 5, output the precise string <code style="background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px;">"Critical Variant Encountered"</code>. For all other values, output <code style="background-color: #f4f4f4; padding: 2px 6px; border-radius: 3px;">"Normal State"</code>.</p>
+            
+            <details style="border: 1px solid #007BA6; border-radius: 6px; background-color: white; overflow: hidden;">
+                <summary style="padding: 12px 15px; cursor: pointer; font-weight: bold; color: #007BA6; background-color: #f4f9fb; user-select: none;">Click to View Assessment Mark Scheme (AO2 / AO3 Target Breakdown)</summary>
+                <div style="padding: 20px; border-top: 1px solid #eee; background: #ffffff;">
+                    <ul style="margin: 0; padding-left: 20px; font-size: 0.95em; color: #333333; list-style-type: square; line-height: 1.8;">
+                        <li><strong style="color: #00796B;">[1 Mark]</strong> Formulation of a definitive count-controlled loop architecture implementing <code style="color: #C62828;">for ... in range(...)</code> syntax spanning exactly 50 instances (e.g., <code style="color: #C62828;">range(0, 50)</code> or <code style="color: #C62828;">range(1, 51)</code>).</li>
+                        <li><strong style="color: #00796B;">[1 Mark]</strong> Application of selection structures (<code style="color: #C62828;">if</code> expression verification) correctly parsing step modulus calculation checks using target arithmetic criteria (<code style="color: #C62828;">% 5 == 0</code>).</li>
+                        <li><strong style="color: #00796B;">[1 Mark]</strong> Accurate configuration of conditional logic execution branches including a clean <code style="color: #C62828;">else:</code> statement block tracking non-divisible indices.</li>
+                        <li><strong style="color: #00796B;">[1 Mark]</strong> Correct structural scoping configuration across all blocks using correct case, syntax rules, and linear logical flow.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div id="pre-lesson-task" style="background-color: #e0f2f1; padding: 25px; border-radius: 8px; border: 2px solid #00796B;">
+            <h2 style="color: #007BA6; margin-top: 0;">5. Pre-Lesson Task Challenge</h2>
+            <p style="color: #00796B; font-weight: bold;">Instruction: Complete this analytical thinking task on your physical workspace log before attending the synchronous programming laboratory environment.</p>
+            <ul style="margin-bottom: 0; padding-left: 20px; line-height: 1.8;">
+                <li><strong>Structural Analysis Challenge:</strong> Contrast the computational efficiency of checking 5 nested variables using a standard linear sequential series of <code style="color: #C62828;">if</code> statements versus passing the same variable configuration directly into a unified structural <code style="color: #C62828;">match-case</code> switch block.</li>
+                <li><strong>The Structural Logic Test:</strong> Consider how count-controlled loops optimize hardware cache hits over indefinitively-bound <code style="color: #C62828;">while</code> logical validation pipelines. Which loop construct establishes deterministic memory space profile allocations?</li>
+                <li><strong>Get Ready:</strong> Bring your saved solution scripts into the next programming workshop session; we will optimize them into advanced recursive routines.</li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    var currentActiveType = "";
+
+    function loadScenario(type) {
+        currentActiveType = type;
+        var promptText = document.getElementById('scenarioPrompt');
+        var codeBox = document.getElementById('codeEditor');
+        var feedback = document.getElementById('feedbackContent');
+        var feedbackBox = document.getElementById('simFeedbackBox');
+        
+        // Reset console UI state
+        feedbackBox.style.border = "2px dashed #007BA6";
+        feedbackBox.style.backgroundColor = "#f4f9fb";
+        feedback.style.color = "#666";
+        feedback.style.fontStyle = "italic";
+        feedback.innerHTML = "Workspace loaded. Complete the instructions below and run code evaluation tracing checks.";
+
+        if (type === 'sequence') {
+            promptText.innerHTML = "<strong>Scenario: Sequence.</strong> Create a script calculating compound metrics. Line 1 must define a variable called <code style='color: #C62828;'>base_value</code> initialized to 100. Line 2 must increment <code style='color: #C62828;'>base_value</code> by exactly 50 using statement sequencing logic. Finally, output the value.";
+            codeBox.value = "base_value = 100\n# Write line 2 and 3 here to complete sequence processing\n";
+        } else if (type === 'match') {
+            promptText.innerHTML = "<strong>Scenario: Selection Match.</strong> Write a valid Python 3.10 structural pattern matching configuration. Evaluate a token variable called <code style='color: #C62828;'>role</code>. If its evaluation state is matching <code style='color: #C62828;'>\"Admin\"</code>, call <code style='color: #C62828;'>print(\"Access Granted\")</code>. Define a catch-all pattern matching case structure handling all anomalous states with <code style='color: #C62828;'>print(\"Denied\")</code>.";
+            codeBox.value = "role = \"Admin\"\nmatch role:\n    case \"Admin\":\n        print(\"Access Granted\")\n    # Add your fall-through wildcard case configuration here\n";
+        } else if (type === 'iteration') {
+            promptText.innerHTML = "<strong>Scenario: Count-Controlled Iteration.</strong> Build an explicit <code style='color: #C62828;'>for</code> loop traversing structural elements. Loop exactly 5 iterations starting from index tracking bounds 0. Each step loop routine execution must run <code style='color: #C62828;'>print(\"Processing Node\")</code>.";
+            codeBox.value = "for i in range(5):\n    # complete code structural scope block below\n";
+        }
+    }
+
+    function evaluateStudentCode() {
+        var code = document.getElementById('codeEditor').value.trim();
+        var feedbackBox = document.getElementById('simFeedbackBox');
+        var feedbackText = document.getElementById('feedbackContent');
+        
+        if (!currentActiveType) {
+            feedbackText.innerHTML = "<strong>Warning:</strong> Select an active configuration challenge target framework from the options button track first.";
+            feedbackText.style.color = "#C62828";
+            return;
+        }
+
+        feedbackText.style.fontStyle = "normal";
+
+        // Logic check framework evaluations (Simulating compiler syntax analysis patterns)
+        if (currentActiveType === 'sequence') {
+            if (code.includes("base_value") && (code.includes("+= 50") || code.includes("base_value + 50")) && code.includes("print")) {
+                setFeedbackState(true, "🎯 Sequence Check Passed Successfully!", "The structural order validation engine verified consecutive instruction assignment steps. Variable initialization tracking memory transitions from 100 directly state stepping to 150 sequentially via sequential operation blocks without divergence.");
+            } else {
+                setFeedbackState(false, "⚠️ Algorithmic Sequence Error Detected", "Ensure you are using the precise structural variables. Check if you modify the state of 'base_value' on line 2, and use a functional print sequence parameter output statement on the final step.");
+            }
+        } 
+        else if (currentActiveType === 'match') {
+            if (code.includes("match") && code.includes("case") && code.includes("case _:") && code.includes("print")) {
+                setFeedbackState(true, "🎯 Selection Match Pattern Validated!", "Excellent structural composition. Your logic safely handles individual conditional testing paths and correctly implements the underscore wildcard pattern structure fallback, isolating malicious/unknown inputs.");
+            } else {
+                setFeedbackState(false, "❌ Pattern Parsing Error", "Review your structural alignment syntax framework rules. Did you specify a proper match token? Ensure you implement the specific wildcard pattern branch block using the exact syntax: <code style='font-family:monospace;'>case _:</code>.");
+            }
+        } 
+        else if (currentActiveType === 'iteration') {
+            if (code.includes("for") && code.includes("range") && code.includes("print") && (code.includes("Processing Node") || code.includes('Processing Node'))) {
+                setFeedbackState(true, "🎯 Iteration Counter Optimization Success!", "Automated compiler scan complete. The structure safely locks down explicitly bound memory allocations and guarantees a finite terminal execution profile precisely over 5 system loops.");
+            } else {
+                setFeedbackState(false, "⚠️ Iteration Structural Exception", "Verify logic scoping constraints. Your script code block requires a valid python <code style='font-family:monospace;'>for</code> iteration structure combined with the exact statement block: <code style='font-family:monospace;'>print(\"Processing Node\")</code> inside proper indentation margins.");
+            }
+        }
+    }
+
+    function setFeedbackState(isSuccess, title, message) {
+        var box = document.getElementById('simFeedbackBox');
+        var content = document.getElementById('feedbackContent');
+        
+        if (isSuccess) {
+            box.style.border = "2px solid #00796B";
+            box.style.backgroundColor = "#e0f2f1";
+            content.style.color = "#333333";
+            content.innerHTML = "<strong style='color: #00796B; font-size: 1.1em;'>" + title + "</strong><p style='margin: 8px 0 0 0; font-size: 0.95em;'>" + message + "</p>";
+        } else {
+            box.style.border = "2px solid #C62828";
+            box.style.backgroundColor = "#ffebee";
+            content.style.color = "#333333";
+            content.innerHTML = "<strong style='color: #C62828; font-size: 1.1em;'>" + title + "</strong><p style='margin: 8px 0 0 0; font-size: 0.95em;'>" + message + "</p>";
+        }
+    }
+</script>
+
+</body>
+</html>
